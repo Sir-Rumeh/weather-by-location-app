@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>weather app</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+		/>
+	</head>
+	<body>
+		<div class="main-div">
+			<div class="left-div">
+				<main id="main"></main>
+				<form
+					id="form"
+					style="align-items: center; justify-content: center; display: flex"
+				>
+					<div style="margin-right: 1rem">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-5 w-5"
+							viewBox="0 0 20 20"
+							fill="white"
+							style="width: 50px; height: 50px"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+								clip-rule="evenodd"
+							/>
+						</svg>
+					</div>
+
+					<input
+						type="text"
+						id="search"
+						placeholder="Search by location"
+						autocomplete="off"
+					/>
+				</form>
+			</div>
+
+			<div class="right-div">
+				<div class="each-item">
+					<div class="icon-div">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="40"
+							height="40"
+							fill="currentColor"
+							class="bi bi-cloud-moon"
+							viewBox="0 0 16 16"
+						>
+							<path
+								d="M7 8a3.5 3.5 0 0 1 3.5 3.555.5.5 0 0 0 .625.492A1.503 1.503 0 0 1 13 13.5a1.5 1.5 0 0 1-1.5 1.5H3a2 2 0 1 1 .1-3.998.5.5 0 0 0 .509-.375A3.502 3.502 0 0 1 7 8zm4.473 3a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5h-.027z"
+							/>
+							<path
+								d="M11.286 1.778a.5.5 0 0 0-.565-.755 4.595 4.595 0 0 0-3.18 5.003 5.46 5.46 0 0 1 1.055.209A3.603 3.603 0 0 1 9.83 2.617a4.593 4.593 0 0 0 4.31 5.744 3.576 3.576 0 0 1-2.241.634c.162.317.295.652.394 1a4.59 4.59 0 0 0 3.624-2.04.5.5 0 0 0-.565-.755 3.593 3.593 0 0 1-4.065-5.422z"
+							/>
+						</svg>
+					</div>
+					<div class="property-div">
+						<div class="property">Weather Description</div>
+						<div class="new-div">
+							<div class="value" id="humidityValue" style="color: #e7eec0">
+								-
+							</div>
+							<span class="unit-span"></span>
+						</div>
+					</div>
+				</div>
+				<div class="each-item">
+					<div class="icon-div">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="40"
+							height="40"
+							fill="currentColor"
+							class="bi bi-cloud-haze2"
+							viewBox="0 0 16 16"
+						>
+							<path
+								d="M8.5 3a4.002 4.002 0 0 0-3.8 2.745.5.5 0 1 1-.949-.313 5.002 5.002 0 0 1 9.654.595A3 3 0 0 1 13 12H4.5a.5.5 0 0 1 0-1H13a2 2 0 0 0 .001-4h-.026a.5.5 0 0 1-.5-.445A4 4 0 0 0 8.5 3zM0 7.5A.5.5 0 0 1 .5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm2 2a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-2 4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5z"
+							/>
+						</svg>
+					</div>
+					<div class="property-div">
+						<div class="property">Air Pressure</div>
+						<div class="new-div">
+							<div class="value" id="airPressureValue">-</div>
+							<span class="unit-span">PS</span>
+						</div>
+					</div>
+				</div>
+				<div class="each-item">
+					<div class="icon-div">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="40"
+							height="40"
+							fill="currentColor"
+							class="bi bi-cloud-drizzle"
+							viewBox="0 0 16 16"
+						>
+							<path
+								d="M4.158 12.025a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317zm6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317zm-3.5 1.5a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 0 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317zm6 0a.5.5 0 0 1 .316.633l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.317zm.747-8.498a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 11H13a3 3 0 0 0 .405-5.973zM8.5 2a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1 0 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4.002 4.002 0 0 1 8.5 2z"
+							/>
+						</svg>
+					</div>
+					<div class="property-div">
+						<div class="property">Gust</div>
+						<div class="new-div">
+							<div class="value" id="gustValue">-</div>
+							<span class="unit-span">%</span>
+						</div>
+					</div>
+				</div>
+				<div class="each-item">
+					<div class="icon-div">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="40"
+							height="40"
+							fill="currentColor"
+							class="bi bi-wind"
+							viewBox="0 0 16 16"
+						>
+							<path
+								d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5zm-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2zM0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5z"
+							/>
+						</svg>
+					</div>
+					<div class="property-div">
+						<div class="property">Wind speed</div>
+						<div class="new-div">
+							<div class="value" id="windSpeedValue">-</div>
+							<span class="unit-span">km/h</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div
+			class="new-div"
+			style="align-items: center; margin-bottom: 4.5rem; margin-top: -4rem"
+		>
+			<div
+				class="days-div"
+				id="cityDiv"
+				style="margin-bottom: 0; font-size: 3.5rem"
+			>
+				______
+			</div>
+			<span class="unit-span" style="font-size: 4rem">>>></span>
+		</div>
+
+		<div class="bottom-div">
+			<div class="individual-container">
+				<div class="time-div">Longitude</div>
+				<div class="temps" id="longitude">-</div>
+			</div>
+			<div class="individual-container">
+				<div class="time-div">Latitude</div>
+				<div class="temps" id="latitude">-</div>
+			</div>
+			<div class="individual-container">
+				<div class="time-div">Country</div>
+				<div class="temps" id="country">-</div>
+			</div>
+			<div class="individual-container">
+				<div class="time-div">Timezone</div>
+				<div class="temps" id="timezone">-</div>
+			</div>
+			<div class="individual-container">
+				<div class="time-div">Min-Temperature</div>
+				<div class="temps" id="minTemp">-</div>
+			</div>
+			<div class="individual-container">
+				<div class="time-div">Max-Temperature</div>
+				<div class="temps" id="maxTemp">-</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

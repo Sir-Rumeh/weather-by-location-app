@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(300deg, #ced1d6, #bfc0c0);
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+		url("./images/lone-tree-g9aa9ffb33_1920.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	font-family: "Poppins", sans-serif;
+	max-height: 100vh;
+	margin-top: 4rem;
+	color: white;
+}
+
+.days-div {
+	font-size: 2.5rem;
+	padding-left: 5rem;
+	margin-top: 1rem;
+	margin-bottom: 4rem;
+}
+
+.main-div {
+	display: flex;
+	flex-direction: row;
+	/* align-items: center; */
+	justify-content: space-between;
+
+	padding-left: 3rem;
+	padding-right: 3rem;
+	margin-top: 15rem;
+	margin-bottom: 0rem;
+}
+
+.bottom-div {
+	display: flex;
+	flex-direction: row;
+	/* align-items: center; */
+	justify-content: space-between;
+	font-size: 3rem;
+	font-weight: bold;
+	/* align-items: center; */
+	margin-top: -4rem;
+	/* padding: 0 2rem; */
+}
+
+.each-item {
+	display: flex;
+	margin-bottom: 2rem;
+}
+
+.property {
+	color: rgb(194, 194, 194);
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	display: flex;
+}
+
+.new-div {
+	display: flex;
+	align-items: center;
+}
+
+.unit-span {
+	font-size: 2rem;
+	margin-left: 1rem;
+}
+
+.property {
+	color: rgb(194, 194, 194);
+}
+
+.value {
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+.each-item .icon-div {
+	margin-right: 2rem;
+	color: rgb(194, 194, 194);
+}
+
+.bottom-div:hover {
+}
+
+.individual-container:hover {
+	background: linear-gradient(rgba(128, 192, 245, 0.3), rgba(238, 111, 7, 0.3));
+	border-radius: 5px;
+	box-shadow: 0px 0px 20px 5px rgba(123, 153, 189, 0.4);
+	-webkit-box-shadow: 0px 0px 20px 5px rgba(123, 153, 189, 0.4);
+	-moz-box-shadow: 0px 0px 20px 5px rgba(123, 153, 189, 0.4);
+	font-size: 4rem;
+	padding-top: 2.5%;
+}
+
+.individual-container:hover .time-div {
+	margin-bottom: 40%;
+}
+
+.individual-container {
+	height: 17rem;
+	width: 17rem;
+	/* align-items: center; */
+	/* justify-content: center; */
+	/* text-align: center; */
+	padding-top: 5%;
+	padding-left: 1%;
+	margin-left: 2rem;
+}
+
+.time-div {
+	font-size: 1.5rem;
+	font-weight: lighter;
+	margin-bottom: 25%;
+}
+
+input {
+	background-color: #fff;
+	border: none;
+	border-radius: 25px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	font-family: inherit;
+	font-size: 1rem;
+	padding: 1rem;
+	min-width: 300px;
+}
+
+input:focus {
+	outline: none;
+}
+
+.weather {
+	font-size: 2rem;
+	text-align: center;
+	color: white;
+	margin-bottom: 2rem;
+	position: absolute;
+	left: 41%;
+}
+
+.weather h2 {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0;
+}
+
+/* background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+
+linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);
+
